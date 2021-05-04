@@ -4,7 +4,7 @@
   "description": "A website showcasing decimalsystem and non-integer number systems, powered by the Desmos API.",
   "main": "bundle.js",
   "scripts": {
-    "build": "browserify circle.js triangle.js golden.js -o bundle.js"
+    "build": "npx webpack && node build.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/uellenberg/DecimalSystem-Desmos#readme",
   "devDependencies": {
-    "browserify": "^17.0.0"
+    "ncp": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
   },
   "dependencies": {
     "decimalsystem": "^1.0.9"
