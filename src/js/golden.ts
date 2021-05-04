@@ -1,3 +1,5 @@
+import {updateDesmosLabels} from "./util";
+
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
@@ -22,14 +24,10 @@ export const golden = () => {
             //This gets the diagonal between a square made by the multiple of the golden ratio.
             const diagonal = Math.sqrt(2 * Math.pow(golden, 2));
 
-            //This needs to be cleaned up a bit into a helper method.
-            newState.objects["165"].label = new Num(oneminus).toBase(goldenConst).toString(3);
-            newState.objects["200"].label = new Num(oneminus).toBase(goldenConst).toString(3);
-            newState.objects["275"].label = new Num(golden).toBase(goldenConst).toString(3);
-            newState.objects["200"].label = new Num(oneminus).toBase(goldenConst).toString(3);
-            newState.objects["384"].label = new Num(diagonal).toBase(goldenConst).toString(3);
-            newState.objects["122"].label = new Num(one).toBase(goldenConst).toString(3);
-            newState.objects["115"].label = new Num(one).toBase(goldenConst).toString(3);
+            updateDesmosLabels(["275"], new Num(golden).toBase(goldenConst).toString(3), newState);
+            updateDesmosLabels(["122", "115"], new Num(one).toBase(goldenConst).toString(3), newState);
+            updateDesmosLabels(["165", "200"], new Num(oneminus).toBase(goldenConst).toString(3), newState);
+            updateDesmosLabels(["384"], new Num(diagonal).toBase(goldenConst).toString(3), newState);
 
             window.geo.setState(newState);
         }, 100);

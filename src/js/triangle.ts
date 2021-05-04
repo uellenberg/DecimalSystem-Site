@@ -1,3 +1,5 @@
+import {updateDesmosLabels} from "./util";
+
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
@@ -21,9 +23,9 @@ export const triangle = () => {
             const l2 = sin45*h;
 
             //The numbers are converted to base SQRT2 and put in their respective labels.
-            newState.objects["948"].label = new Num(l1).toBase(Math.SQRT2).toNumber(0).toLocaleString();
-            newState.objects["949"].label = new Num(l2).toBase(Math.SQRT2).toNumber(0).toLocaleString();
-            newState.objects["940"].label = new Num(h).toBase(Math.SQRT2).toNumber(0).toLocaleString();
+            updateDesmosLabels(["948"], new Num(l1).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
+            updateDesmosLabels(["949"], new Num(l2).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
+            updateDesmosLabels(["940"], new Num(h).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
 
             window.geo.setState(newState);
         }, 100);

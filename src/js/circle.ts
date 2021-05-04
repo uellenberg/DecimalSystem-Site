@@ -1,3 +1,5 @@
+import {updateDesmosLabels} from "./util";
+
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
@@ -17,8 +19,8 @@ export const circle = () => {
             const circumference = diameter * Math.PI;
 
             //The circumference and diameter's base PI length is put on their labels.
-            newState.objects["2"].label = new Num(circumference).toBase(Math.PI).toString(3);
-            newState.objects["29"].label = new Num(diameter).toBase(Math.PI).toString(4);
+            updateDesmosLabels(["2"], new Num(circumference).toBase(Math.PI).toString(3), newState);
+            updateDesmosLabels(["29"], new Num(diameter).toBase(Math.PI).toString(4), newState);
 
             window.geo.setState(newState);
         }, 100);
