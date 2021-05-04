@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/uellenberg/DecimalSystem-Desmos#readme",
   "devDependencies": {
+    "@types/jquery": "^3.5.5",
     "ncp": "^2.0.0",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0"

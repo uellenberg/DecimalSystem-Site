@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["es2016", "es5", "dom"],
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "rootDir": "src/js",
+    "sourceMap": true,
+    "target": "es5",
+    "declaration": false
+  },
+  "compileOnSave": true,
+  "include": ["src/js/**/*"],
+  "exclude": ["node_modules", ".idea", ".env"]
+}

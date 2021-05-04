@@ -1,3 +1,5 @@
+import * as Desmos from "Desmos";
+
 const {Num} = require("decimalsystem");
 
 if(!window.bundle) window.bundle = {};
