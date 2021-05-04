@@ -1,0 +1,25 @@
+{
+  "name": "decimalsystem-desmos",
+  "version": "1.0.0",
+  "description": "A website showcasing decimalsystem and non-integer number systems, powered by the Desmos API.",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "browserify circle.js triangle.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uellenberg/DecimalSystem-Desmos.git"
+  },
+  "author": "Jonah Uellenberg",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/uellenberg/DecimalSystem-Desmos/issues"
+  },
+  "homepage": "https://github.com/uellenberg/DecimalSystem-Desmos#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0"
+  },
+  "dependencies": {
+    "decimalsystem": "^1.0.9"
+  }
+}
