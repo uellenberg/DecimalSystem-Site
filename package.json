@@ -4,7 +4,7 @@
   "description": "A website showcasing decimalsystem and non-integer number systems, powered by the Desmos API.",
   "main": "bundle.js",
   "scripts": {
-    "build": "browserify circle.js triangle.js -o bundle.js"
+    "build": "browserify circle.js triangle.js golden.js -o bundle.js"
   },
   "repository": {
     "type": "git",
