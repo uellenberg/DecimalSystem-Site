@@ -1,10 +1,8 @@
-import * as Desmos from "Desmos";
-
 const {Num} = require("decimalsystem");
 
-if(!window.bundle) window.bundle = {};
+declare var Desmos: any;
 
-window.bundle.circle = () => {
+export const circle = () => {
     $(() => {
         window.geo = Desmos.Geometry(document.getElementById("geometry"));
 

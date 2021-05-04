@@ -1,10 +1,8 @@
-import * as Desmos from "Desmos";
-
 const {Num} = require("decimalsystem");
 
-if(!window.bundle) window.bundle = {};
+declare var Desmos: any;
 
-window.bundle.triangle = triangle => {
+export const triangle = () => {
     const cos45 = Math.cos(45 * Math.PI/180);
     const sin45 = Math.sin(45 * Math.PI/180);
 
