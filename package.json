@@ -25,6 +25,6 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "decimalsystem": "^1.0.9"
+    "decimalsystem": "^1.0.10"
   }
 }

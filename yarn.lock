@@ -316,10 +316,10 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-decimalsystem@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/decimalsystem/-/decimalsystem-1.0.9.tgz#2dd5d14bcd2ac24352f3a4b18f6450c27825f7b2"
-  integrity sha512-DoVP1yqU2gpx0+2kpFkyMtNYE3de/MWGVMCka87j8bCS79bdvDVAFttN120mElbAsTDu5Onq6/EXY0h8Q1wIgg==
+decimalsystem@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/decimalsystem/-/decimalsystem-1.0.10.tgz#25fc99cef4595557b71385ce3d5cf38354259fc0"
+  integrity sha512-8JSVOAC1plD6/4a8JSgeBtdg0Qp9l6HNybqaS2tTN+YBqU79YX/sJZlqwoeSKsyoi/4HKpwxyRGVLzvz0FN5Ow==
 
 electron-to-chromium@^1.3.723:
   version "1.3.726"
