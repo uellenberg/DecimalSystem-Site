@@ -1,11 +1,14 @@
-import {updateDesmosLabels} from "./util";
+import {tryRemove, updateDesmosLabels} from "./util";
+import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
 
-export const circle = () => {
+if(isBrowser()){
     $(() => {
+        tryRemove();
+
         window.geo = Desmos.Geometry(document.getElementById("geometry"));
 
         window.geo.setState(state);
