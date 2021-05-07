@@ -4,28 +4,26 @@ const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
 
-export const circle = () => {
-    $(() => {
-        window.geo = Desmos.Geometry(document.getElementById("geometry"));
+$(() => {
+    window.geo = Desmos.Geometry(document.getElementById("geometry"));
 
-        window.geo.setState(state);
+    window.geo.setState(state);
 
-        setInterval(() => {
-            const newState = window.geo.getState();
+    setInterval(() => {
+        const newState = window.geo.getState();
 
-            //The radius is calculated from two points of the circle, and the diameter and circumference are calculated from it.
-            const radius = Math.hypot(Math.abs(newState.objects["1"].x - newState.objects["2"].x), Math.abs(newState.objects["1"].y - newState.objects["2"].y));
-            const diameter = radius * 2;
-            const circumference = diameter * Math.PI;
+        //The radius is calculated from two points of the circle, and the diameter and circumference are calculated from it.
+        const radius = Math.hypot(Math.abs(newState.objects["1"].x - newState.objects["2"].x), Math.abs(newState.objects["1"].y - newState.objects["2"].y));
+        const diameter = radius * 2;
+        const circumference = diameter * Math.PI;
 
-            //The circumference and diameter's base PI length is put on their labels.
-            updateDesmosLabels(["2"], new Num(circumference).toBase(Math.PI).toString(3), newState);
-            updateDesmosLabels(["29"], new Num(diameter).toBase(Math.PI).toString(4), newState);
+        //The circumference and diameter's base PI length is put on their labels.
+        updateDesmosLabels(["2"], new Num(circumference).toBase(Math.PI).toString(3), newState);
+        updateDesmosLabels(["29"], new Num(diameter).toBase(Math.PI).toString(4), newState);
 
-            window.geo.setState(newState);
-        }, 100);
-    });
-}
+        window.geo.setState(newState);
+    }, 100);
+});
 
 const state = {
     "version": "4",
