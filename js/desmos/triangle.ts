@@ -1,14 +1,17 @@
-import {updateDesmosLabels} from "./util";
+import {tryRemove, updateDesmosLabels} from "./util";
+import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
 
-export const triangle = () => {
+if(isBrowser()){
     const cos45 = Math.cos(45 * Math.PI/180);
     const sin45 = Math.sin(45 * Math.PI/180);
 
     $(() => {
+        tryRemove();
+
         window.geo = Desmos.Geometry(document.getElementById("geometry"));
 
         window.geo.setState(state);

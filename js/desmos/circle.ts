@@ -1,29 +1,34 @@
-import {updateDesmosLabels} from "./util";
+import {tryRemove, updateDesmosLabels} from "./util";
+import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
 
-$(() => {
-    window.geo = Desmos.Geometry(document.getElementById("geometry"));
+if(isBrowser()){
+    $(() => {
+        tryRemove();
 
-    window.geo.setState(state);
+        window.geo = Desmos.Geometry(document.getElementById("geometry"));
 
-    setInterval(() => {
-        const newState = window.geo.getState();
+        window.geo.setState(state);
 
-        //The radius is calculated from two points of the circle, and the diameter and circumference are calculated from it.
-        const radius = Math.hypot(Math.abs(newState.objects["1"].x - newState.objects["2"].x), Math.abs(newState.objects["1"].y - newState.objects["2"].y));
-        const diameter = radius * 2;
-        const circumference = diameter * Math.PI;
+        setInterval(() => {
+            const newState = window.geo.getState();
 
-        //The circumference and diameter's base PI length is put on their labels.
-        updateDesmosLabels(["2"], new Num(circumference).toBase(Math.PI).toString(3), newState);
-        updateDesmosLabels(["29"], new Num(diameter).toBase(Math.PI).toString(4), newState);
+            //The radius is calculated from two points of the circle, and the diameter and circumference are calculated from it.
+            const radius = Math.hypot(Math.abs(newState.objects["1"].x - newState.objects["2"].x), Math.abs(newState.objects["1"].y - newState.objects["2"].y));
+            const diameter = radius * 2;
+            const circumference = diameter * Math.PI;
 
-        window.geo.setState(newState);
-    }, 100);
-});
+            //The circumference and diameter's base PI length is put on their labels.
+            updateDesmosLabels(["2"], new Num(circumference).toBase(Math.PI).toString(3), newState);
+            updateDesmosLabels(["29"], new Num(diameter).toBase(Math.PI).toString(4), newState);
+
+            window.geo.setState(newState);
+        }, 100);
+    });
+}
 
 const state = {
     "version": "4",
