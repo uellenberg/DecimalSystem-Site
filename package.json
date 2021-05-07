@@ -1,10 +1,10 @@
 {
-  "name": "decimalsystem-desmos",
+  "name": "decimalsystem-site",
   "version": "1.0.0",
   "description": "A website showcasing decimalsystem and non-integer number systems, powered by the Desmos API.",
   "main": "bundle.js",
   "scripts": {
-    "build": "npx next build && npx next export -o dist/"
+    "build": "npx next build && npx next export -o dist/ && npx touch dist/.nojekyll"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.32.12",
+    "touch": "^3.1.0",
     "ts-loader": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.36.2",

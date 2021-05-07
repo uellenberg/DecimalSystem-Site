@@ -6,5 +6,7 @@ module.exports = {
     },
     typescript: {
         includePaths: [path.join(__dirname, "js")]
-    }
+    },
+    basePath: '/DecimalSystem',
+    assetPrefix: '/DecimalSystem/',
 }
