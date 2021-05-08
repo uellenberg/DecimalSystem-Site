@@ -724,6 +724,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fontsource/abhaya-libre@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/abhaya-libre/-/abhaya-libre-4.3.0.tgz#d81a9a208b635b507dd47eeab7863e0ccb40a02f"
+  integrity sha512-DAD43RhD1DR/F1sDkW9C8/e1tMVLk7B2NWDUuvRuS4pNlDSafoDsK/IVUiGz8PjicVqAN0EuQvC1kxoHhiISbw==
+
 "@fontsource/alata@^4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@fontsource/alata/-/alata-4.3.0.tgz#df7f4f1be405ba8615449cd6b10d42f1012afe71"

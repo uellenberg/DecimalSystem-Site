@@ -19,9 +19,26 @@ const IndexPage = () => {
                 id="masthead"
             >
                 <chakra.div id="masthead-container">
-                    <chakra.header fontFamily="open-sans" fontSize="40" display="block">
+                    <chakra.header
+                        fontFamily="open-sans"
+                        fontSize={{base: "35", md: "50", lg: "60"}}
+                        pl={{base: "15", md: "50", lg: "60"}}
+                        pr={{base: "15", md: "50", lg: "60"}}
+                        display="block"
+                    >
                         Convert any Number to any Number System.
                     </chakra.header>
+                    <chakra.p
+                        fontFamily="abhaya-libre"
+                        fontSize={{base: "20", lg: "30"}}
+                        pl={{base: "30", lg: "80"}}
+                        pr={{base: "30", lg: "80"}}
+                        pb={{base: "5"}}
+                        display="block"
+                        color="gray.400"
+                    >
+                        DecimalSystem is a powerful base conversion library that can convert any (real) number to any base (over 1), including non-integer bases, like base PI.
+                    </chakra.p>
                     <Button colorScheme="blue" display="block">Get Started</Button>
                 </chakra.div>
                 <chakra.div className="code-container" mt="10" ml="auto" mr="auto">
