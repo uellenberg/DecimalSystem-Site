@@ -31,6 +31,17 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "decimalsystem": "^1.0.10"
+    "@chakra-ui/react": "^1.6.1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@fontsource/alata": "^4.3.0",
+    "@fontsource/open-sans": "^4.3.0",
+    "decimalsystem": "^1.0.10",
+    "framer-motion": "^4",
+    "gray-matter": "^4.0.3",
+    "prismjs": "^1.23.0",
+    "raw-loader": "^4.0.2",
+    "react-icons": "^4.2.0",
+    "react-markdown": "^6.0.2"
   }
 }

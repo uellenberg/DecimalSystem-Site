@@ -5,10 +5,15 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
+                use: "ts-loader",
+                exclude: /node_modules/
             },
-        ],
+            {
+                test: /\.md$/,
+                use: "raw-loader",
+                exclude: /node_modules/
+            }
+        ]
     },
     resolve: {
         extensions: [".ts", ".js"],

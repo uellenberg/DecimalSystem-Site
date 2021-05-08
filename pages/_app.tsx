@@ -1,8 +1,15 @@
-import "../styles/desmos.scss";
+import { ChakraProvider } from "@chakra-ui/react"
+
+import "../styles/index.scss";
+import "prismjs/themes/prism-tomorrow.css";
+
+import React from "react";
 
 export const App = ({ Component, pageProps}) => {
     return (
-        <Component {...pageProps} />
+        <ChakraProvider>
+            <Component {...pageProps} />
+        </ChakraProvider>
     );
 }
 

@@ -1,0 +1,20 @@
+#masthead-container > * {
+  text-align: center;
+  margin: auto;
+}
+
+#masthead-container header {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.code-container {
+  text-align: center;
+}
+
+.code-container pre {
+  display: inline-block;
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px;
+}
