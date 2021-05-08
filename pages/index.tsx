@@ -39,7 +39,7 @@ const IndexPage = () => {
                         display="block"
                         color="gray.400"
                     >
-                        DecimalSystem is a powerful base conversion library that can convert any (real) number to any base (over 1), including non-integer bases, like base PI.
+                        DecimalSystem is a powerful base conversion library that can convert any (real) number to any base (over 1), including non-integer bases like base PI.
                     </chakra.p>
                     <Link href="/docs/start">
                         <Button colorScheme="blue" display="block" fontSize={{base: "20"}}>Get Started</Button>
