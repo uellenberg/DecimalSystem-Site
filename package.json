@@ -4,7 +4,7 @@
   "description": "A website showcasing decimalsystem and non-integer number systems, powered by the Desmos API.",
   "main": "bundle.js",
   "scripts": {
-    "build": "npx next build && npx next export -o dist/ && npx touch dist/.nojekyll"
+    "build": "npx next build && npx next export -o dist/ && npx touch dist/.nojekyll && echo decimalsystem.js.org > dist/CNAME"
   },
   "repository": {
     "type": "git",
