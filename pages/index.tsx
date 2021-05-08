@@ -15,7 +15,7 @@ const IndexPage = () => {
             <Header/>
 
             <Box
-                mt={{base: "0", md: "10%"}}
+                mt={{base: "10%", md: "5%"}}
                 id="masthead"
             >
                 <chakra.div id="masthead-container">
