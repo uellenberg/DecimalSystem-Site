@@ -9,7 +9,7 @@ if(isBrowser()){
     $(() => {
         tryRemove();
 
-        window.geo = Desmos.Geometry(document.getElementById("geometry"));
+        window.geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
 
         window.geo.setState(state);
 
