@@ -18,3 +18,12 @@
   border-radius: 10px;
   padding: 10px;
 }
+
+#masthead .code-container {
+  max-width: 90%;
+}
+
+#masthead .code-container pre {
+  overflow: auto;
+  max-width: 100%;
+}

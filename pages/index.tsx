@@ -24,7 +24,7 @@ const IndexPage = () => {
                     </chakra.header>
                     <Button colorScheme="blue" display="block">Get Started</Button>
                 </chakra.div>
-                <chakra.div className="code-container" mt="10">
+                <chakra.div className="code-container" mt="10" ml="auto" mr="auto">
                     <chakra.pre
                         dangerouslySetInnerHTML={{__html: Prism.highlight(`import {Num} from "decimalsystem";\nnew Num(10).toBase(Math.PI).toString();`, Prism.languages.javascript, "javascript")}}
                         bg={bg}
