@@ -16,20 +16,6 @@
     "url": "https://github.com/uellenberg/DecimalSystem-Desmos/issues"
   },
   "homepage": "https://github.com/uellenberg/DecimalSystem-Desmos#readme",
-  "devDependencies": {
-    "@types/jquery": "^3.5.5",
-    "@types/react": "^17.0.5",
-    "ncp": "^2.0.0",
-    "next": "^10.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.32.12",
-    "touch": "^3.1.0",
-    "ts-loader": "^9.1.1",
-    "typescript": "^4.2.4",
-    "webpack": "^5.36.2",
-    "webpack-cli": "^4.6.0"
-  },
   "dependencies": {
     "@chakra-ui/react": "^1.6.1",
     "@emotion/react": "^11",
@@ -42,6 +28,18 @@
     "prismjs": "^1.23.0",
     "raw-loader": "^4.0.2",
     "react-icons": "^4.2.0",
-    "react-markdown": "^6.0.2"
+    "react-markdown": "^6.0.2",
+    "@types/jquery": "^3.5.5",
+    "@types/react": "^17.0.5",
+    "ncp": "^2.0.0",
+    "next": "^10.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.12",
+    "touch": "^3.1.0",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
   }
 }
