@@ -107,7 +107,7 @@ const Demo = (props: {img: string, aria: string, url: string, title: string, des
                 <chakra.header
                     textAlign="center"
                     fontFamily="open-sans"
-                    fontSize={{base: "20", md: "30"}}
+                    fontSize={{base: "25", md: "30"}}
                 >
                     {props.title}
                 </chakra.header>
@@ -122,7 +122,7 @@ const Demo = (props: {img: string, aria: string, url: string, title: string, des
                 <chakra.header
                     textAlign="center"
                     fontFamily="open-sans"
-                    fontSize={{base: "10", md: "20"}}
+                    fontSize={{base: "20"}}
                     lineHeight={{base: "1"}}
                 >
                     {props.desc}
