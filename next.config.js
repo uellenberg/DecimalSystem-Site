@@ -7,8 +7,6 @@ module.exports = {
     typescript: {
         includePaths: [path.join(__dirname, "js")]
     },
-    basePath: '/DecimalSystem',
-    assetPrefix: '/DecimalSystem/',
     webpack: (config) => {
         config.module.rules.push({
             test: /\.md$/,
