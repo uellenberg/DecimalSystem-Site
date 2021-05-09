@@ -10,10 +10,6 @@ import React, {useEffect} from "react";
 import RunkitRenderer from "../../components/runkitRenderer";
 
 const DocTemplate = (props: MarkdownData) => {
-    useEffect(() => {
-        console.log("effect")
-    });
-
     return (
         <>
             <SEO title={"DecimalSystem Docs: " + props.data.name} url={"https://decimalsystem.js.org/docs/" + props.data.url}/>

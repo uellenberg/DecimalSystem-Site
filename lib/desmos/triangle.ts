@@ -19,13 +19,6 @@ export const Create = () => {
 
         //The first leg of the triangle is based on two points, the distance of is calculated below.
         //The rest just use trig based on that leg and a 45 degree angle.
-        try {
-            const l1 = Math.hypot(Math.abs(newState.objects["923"].x - newState.objects["924"].x), Math.abs(newState.objects["923"].y - newState.objects["924"].y)) / 2;
-        }
-        catch(e){
-            console.error(e);
-            console.log(newState);
-        }
         const l1 = Math.hypot(Math.abs(newState.objects["923"].x - newState.objects["924"].x), Math.abs(newState.objects["923"].y - newState.objects["924"].y)) / 2;
         const h = l1/cos45;
         const l2 = sin45*h;
