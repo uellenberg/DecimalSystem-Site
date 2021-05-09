@@ -1,8 +1,7 @@
 import {updateDesmosLabels} from "./util";
 
-const {Num} = require("decimalsystem");
-
 declare var Desmos: any;
+declare var decimalsystem: any;
 
 export const Create = () => {
     const geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
@@ -24,10 +23,10 @@ export const Create = () => {
         //This gets the diagonal between a square made by the multiple of the golden ratio.
         const diagonal = Math.sqrt(2 * Math.pow(golden, 2));
 
-        updateDesmosLabels(["275"], new Num(golden).toBase(goldenConst).toString(3), newState);
-        updateDesmosLabels(["122", "115"], new Num(one).toBase(goldenConst).toString(3), newState);
-        updateDesmosLabels(["165", "200"], new Num(oneminus).toBase(goldenConst).toString(3), newState);
-        updateDesmosLabels(["384"], new Num(diagonal).toBase(goldenConst).toString(3), newState);
+        updateDesmosLabels(["275"], new decimalsystem.Num(golden).toBase(goldenConst).toString(3), newState);
+        updateDesmosLabels(["122", "115"], new decimalsystem.Num(one).toBase(goldenConst).toString(3), newState);
+        updateDesmosLabels(["165", "200"], new decimalsystem.Num(oneminus).toBase(goldenConst).toString(3), newState);
+        updateDesmosLabels(["384"], new decimalsystem.Num(diagonal).toBase(goldenConst).toString(3), newState);
 
         geo.setState(newState);
     }, 100);

@@ -1,8 +1,7 @@
 import {updateDesmosLabels} from "./util";
 
-const {Num} = require("decimalsystem");
-
 declare var Desmos: any;
+declare var decimalsystem: any;
 
 export const Create = () => {
     const geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
@@ -19,8 +18,8 @@ export const Create = () => {
         const circumference = diameter * Math.PI;
 
         //The circumference and diameter's base PI length is put on their labels.
-        updateDesmosLabels(["2"], new Num(circumference).toBase(Math.PI).toString(3), newState);
-        updateDesmosLabels(["29"], new Num(diameter).toBase(Math.PI).toString(4), newState);
+        updateDesmosLabels(["2"], new decimalsystem.Num(circumference).toBase(Math.PI).toString(3), newState);
+        updateDesmosLabels(["29"], new decimalsystem.Num(diameter).toBase(Math.PI).toString(4), newState);
 
         geo.setState(newState);
     }, 100);

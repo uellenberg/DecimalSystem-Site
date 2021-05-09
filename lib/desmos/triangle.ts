@@ -3,6 +3,7 @@ import {updateDesmosLabels} from "./util";
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
+declare var decimalsystem: any;
 
 export const Create = () => {
     const cos45 = Math.cos(45 * Math.PI/180);
@@ -30,9 +31,9 @@ export const Create = () => {
         const l2 = sin45*h;
 
         //The numbers are converted to base SQRT2 and put in their respective labels.
-        updateDesmosLabels(["948"], new Num(l1).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
-        updateDesmosLabels(["949"], new Num(l2).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
-        updateDesmosLabels(["940"], new Num(h).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
+        updateDesmosLabels(["948"], new decimalsystem.Num(l1).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
+        updateDesmosLabels(["949"], new decimalsystem.Num(l2).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
+        updateDesmosLabels(["940"], new decimalsystem.Num(h).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
 
         geo.setState(newState);
     }, 100);
