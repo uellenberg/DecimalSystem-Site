@@ -4,6 +4,7 @@ import Menu from "../../components/menu/menu";
 import Header from "../../components/header";
 import {Box} from "@chakra-ui/layout";
 import remarkGfm from "remark-gfm";
+import HeadingRenderer from "../../components/HedaingRenderer";
 
 const DocTemplate = (props: MarkdownData) => {
     console.log(props);
@@ -24,7 +25,7 @@ const DocTemplate = (props: MarkdownData) => {
                     pr="10%"
                     id="docs-container"
                     overflow="auto"
-                ><ReactMarkdown remarkPlugins={[remarkGfm]}>{props.content}</ReactMarkdown></Box>
+                ><ReactMarkdown remarkPlugins={[remarkGfm]} components={{ h1: HeadingRenderer, h2: HeadingRenderer }}>{props.content}</ReactMarkdown></Box>
             </Box>
         </>
     );
