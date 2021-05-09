@@ -3,7 +3,3 @@ export const updateDesmosLabels = (ids: any[], value: any, state: any) : void =>
         state.objects[id].label = value;
     });
 }
-
-export const tryRemove = () => {
-    window.geo?.destroy();
-}

@@ -1,4 +1,4 @@
-import {tryRemove, updateDesmosLabels} from "./util";
+import {updateDesmosLabels} from "./util";
 import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
@@ -10,8 +10,6 @@ if(isBrowser()){
     const sin45 = Math.sin(45 * Math.PI/180);
 
     $(() => {
-        tryRemove();
-
         window.geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
 
         window.geo.setState(state);

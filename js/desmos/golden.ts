@@ -1,4 +1,4 @@
-import {tryRemove, updateDesmosLabels} from "./util";
+import {updateDesmosLabels} from "./util";
 import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
@@ -7,8 +7,6 @@ declare var Desmos: any;
 
 if(isBrowser()){
     $(() => {
-        tryRemove();
-
         window.geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
 
         window.geo.setState(state);
