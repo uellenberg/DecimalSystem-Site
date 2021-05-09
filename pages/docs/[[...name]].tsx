@@ -5,12 +5,13 @@ import Header from "../../components/header";
 import {Box} from "@chakra-ui/layout";
 import remarkGfm from "remark-gfm";
 import HeadingRenderer from "../../components/HedaingRenderer";
+import SEO from "../../components/seo";
+import React from "react";
 
 const DocTemplate = (props: MarkdownData) => {
-    console.log(props);
-
     return (
         <>
+            <SEO title={"DecimalSystem Docs: " + props.data.name} url={"https://decimalsystem.js.org/docs/" + props.data.url}/>
             <Header/>
             <Box
                 width="full"
@@ -63,7 +64,7 @@ export const getStaticProps = async ({ params }) : Promise<{props: MarkdownData}
 
     const data = matter(content.default);
 
-    return {props: {name, content: content.default, data: data.data}};
+    return {props: {name, content: data.content, data: data.data}};
 }
 
 export default DocTemplate;

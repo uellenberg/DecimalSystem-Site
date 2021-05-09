@@ -4,15 +4,14 @@ import {Box, Button, chakra, Divider, useColorModeValue, HStack, Grid, Link} fro
 import Prism from "prismjs";
 import React from "react";
 import NextLink from "next/link";
+import SEO from "../components/seo";
 
 const IndexPage = () => {
     const bg = useColorModeValue("gray.700", "gray.900");
 
     return (
         <>
-            <Head>
-                <title>DecimalSystem</title>
-            </Head>
+            <SEO title="DecimalSystem" url="https://decimalsystem.js.org"/>
 
             <Header/>
 
