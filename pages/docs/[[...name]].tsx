@@ -6,9 +6,14 @@ import {Box} from "@chakra-ui/layout";
 import remarkGfm from "remark-gfm";
 import HeadingRenderer from "../../components/HedaingRenderer";
 import SEO from "../../components/seo";
-import React from "react";
+import React, {useEffect} from "react";
+import RunkitRenderer from "../../components/runkitRenderer";
 
 const DocTemplate = (props: MarkdownData) => {
+    useEffect(() => {
+        console.log("effect")
+    });
+
     return (
         <>
             <SEO title={"DecimalSystem Docs: " + props.data.name} url={"https://decimalsystem.js.org/docs/" + props.data.url}/>
@@ -26,7 +31,7 @@ const DocTemplate = (props: MarkdownData) => {
                     pr="10%"
                     id="docs-container"
                     overflow="auto"
-                ><ReactMarkdown remarkPlugins={[remarkGfm]} components={{ h1: HeadingRenderer, h2: HeadingRenderer }}>{props.content}</ReactMarkdown></Box>
+                ><ReactMarkdown remarkPlugins={[remarkGfm]} components={{ h1: HeadingRenderer, h2: HeadingRenderer, pre: RunkitRenderer }}>{props.content}</ReactMarkdown></Box>
             </Box>
         </>
     );
