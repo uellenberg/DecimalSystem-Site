@@ -1,24 +1,31 @@
 import {updateDesmosLabels} from "./util";
-import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
 
-if(isBrowser()){
-    const cos45 = Math.cos(45 * Math.PI/180);
-    const sin45 = Math.sin(45 * Math.PI/180);
+if(typeof window !== "undefined"){
+    setTimeout(() => {
+        const cos45 = Math.cos(45 * Math.PI/180);
+        const sin45 = Math.sin(45 * Math.PI/180);
 
-    $(() => {
-        window.geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
+        const geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
 
-        window.geo.setState(state);
+        geo.setState(state);
 
         setInterval(() => {
-            const newState = window.geo.getState();
+            const newState = geo.getState();
+            if(!newState) return;
 
             //The first leg of the triangle is based on two points, the distance of is calculated below.
             //The rest just use trig based on that leg and a 45 degree angle.
+            try {
+                const l1 = Math.hypot(Math.abs(newState.objects["923"].x - newState.objects["924"].x), Math.abs(newState.objects["923"].y - newState.objects["924"].y)) / 2;
+            }
+            catch(e){
+                console.error(e);
+                console.log(newState);
+            }
             const l1 = Math.hypot(Math.abs(newState.objects["923"].x - newState.objects["924"].x), Math.abs(newState.objects["923"].y - newState.objects["924"].y)) / 2;
             const h = l1/cos45;
             const l2 = sin45*h;
@@ -28,9 +35,9 @@ if(isBrowser()){
             updateDesmosLabels(["949"], new Num(l2).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
             updateDesmosLabels(["940"], new Num(h).toBase(Math.SQRT2).toNumber(0).toLocaleString(), newState);
 
-            window.geo.setState(newState);
+            geo.setState(newState);
         }, 100);
-    });
+    }, 100);
 }
 
 const state = {

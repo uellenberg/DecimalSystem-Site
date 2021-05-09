@@ -1,20 +1,20 @@
 import {updateDesmosLabels} from "./util";
-import {isBrowser} from "../util";
 
 const {Num} = require("decimalsystem");
 
 declare var Desmos: any;
 
-if(isBrowser()){
-    $(() => {
-        window.geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
+if(typeof window !== "undefined"){
+    setTimeout(() => {
+        const geo = Desmos.Geometry(document.getElementById("geometry"), {sidebarCollapsed: true});
 
-        window.geo.setState(state);
+        geo.setState(state);
 
         const goldenConst = (1 + Math.sqrt(5)) / 2;
 
         setInterval(() => {
-            const newState = window.geo.getState();
+            const newState = geo.getState();
+            if(!newState) return;
 
             //This gets the side that is a multiple of the golden ratio.
             const golden = Math.hypot(Math.abs(newState.objects["62"].x - newState.objects["63"].x), Math.abs(newState.objects["62"].y - newState.objects["63"].y)) / 1.2356979405;
@@ -30,9 +30,9 @@ if(isBrowser()){
             updateDesmosLabels(["165", "200"], new Num(oneminus).toBase(goldenConst).toString(3), newState);
             updateDesmosLabels(["384"], new Num(diagonal).toBase(goldenConst).toString(3), newState);
 
-            window.geo.setState(newState);
+            geo.setState(newState);
         }, 100);
-    });
+    }, 100);
 }
 
 const state = {

@@ -1,7 +1,6 @@
-import {isBrowser} from "./util";
 import Prism from "prismjs";
 
-if(isBrowser()){
+if(typeof window !== "undefined"){
     $(() => {
         Prism.highlightAll();
     });
