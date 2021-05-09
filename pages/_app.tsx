@@ -4,6 +4,8 @@ import React from "react";
 import "../styles/index.scss";
 import "prismjs/themes/prism-tomorrow.css";
 
+import "../js/index";
+
 const config = {
     initialColorMode: "dark",
     useSystemColorMode: false,

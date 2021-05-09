@@ -1,12 +1,31 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import Menu from "../../components/menu/menu";
+import Header from "../../components/header";
+import {Box} from "@chakra-ui/layout";
+import remarkGfm from "remark-gfm";
 
 const DocTemplate = (props: MarkdownData) => {
     console.log(props);
 
     return (
         <>
-            <ReactMarkdown>{props.content}</ReactMarkdown>
+            <Header/>
+            <Box
+                width="full"
+                height="calc(100% - 72px)"
+                display="flex"
+            >
+                <Menu/>
+                <Box
+                    width="100%"
+                    height="100%"
+                    p="5%"
+                    pr="10%"
+                    id="docs-container"
+                    overflow="auto"
+                ><ReactMarkdown remarkPlugins={[remarkGfm]}>{props.content}</ReactMarkdown></Box>
+            </Box>
         </>
     );
 }
@@ -19,13 +38,16 @@ interface MarkdownData {
 
 export const getStaticPaths = async () => ({
     paths: [
-        { params: { name: undefined } }
+        { params: { name: undefined } },
+        { params: { name: [ "start" ] } },
+        { params: { name: [ "install" ] } },
+        { params: { name: [ "num" ] } }
     ],
         fallback: false
 });
 
 const fileNames: Record<string, string> = {
-    undefined: "index"
+    undefined: "num"
 };
 
 const getFileName = (name: string) : string => {
@@ -35,7 +57,7 @@ const getFileName = (name: string) : string => {
 export const getStaticProps = async ({ params }) : Promise<{props: MarkdownData}> => {
     const name = getFileName(params.name);
 
-    const content = await import(`./content/${name}.md`);
+    const content = await import(`./content/${name}.mdx`);
 
     const data = matter(content.default);
 

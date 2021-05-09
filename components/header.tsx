@@ -6,6 +6,9 @@ import {FaMoon, FaSun, FaBars, FaTimes} from "react-icons/fa";
 import NextLink from "next/link";
 import {RemoveScroll} from "react-remove-scroll";
 import Logo from "./logo";
+import MenuLink from "./menu/menuLink";
+import MenuCategory from "./menu/menuCategory";
+import MenuItems from "./menu/menuItems";
 
 const GithubIcon = (props: React.ComponentProps<"svg">) => (
     <svg viewBox="0 0 21 21" width="20" height="20" {...props}>
@@ -207,40 +210,15 @@ export function MobileNavContent(props: MobileNavContentProps) {
                                     setShadow(scrolled ? "md" : undefined)
                                 }}
                             >
-                                <MenuLink text="Docs" url="/docs"/>
-                                <MenuLink text="Getting Started" url="/docs/start"/>
-                                <MenuLink text="Github" url="https://github.com/uellenberg/DecimalSystem" isExternal/>
-                                <MenuLink text="NPM" url="https://npmjs.com/package/decimalsystem" isExternal/>
+                                <MenuLink text="Github" url="https://github.com/uellenberg/DecimalSystem" aria="Github Page" category isExternal/>
+                                <MenuLink text="NPM" url="https://npmjs.com/package/decimalsystem" aria="NPM Page" category isExternal/>
+                                <MenuItems/>
                             </ScrollView>
                         </Flex>
                     </motion.div>
                 </RemoveScroll>
             )}
         </AnimatePresence>
-    );
-}
-
-const MenuLink = (props: { text: string, url: string, isExternal?: boolean }) => {
-    const { text, url, ...rest } = props;
-
-    return (
-        <Link
-            href={props.url}
-            mr="3"
-            aria-label="Getting Started Page"
-            {...rest}
-        >
-            <chakra.h4
-                fontSize="sm"
-                fontWeight="bold"
-                my="1.25rem"
-                textTransform="uppercase"
-                letterSpacing="wider"
-                color={useColorModeValue("gray.700", "inherit")}
-            >
-                {props.text}
-            </chakra.h4>
-        </Link>
     );
 }
 

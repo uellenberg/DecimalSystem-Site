@@ -6,7 +6,7 @@ import React from "react";
 import NextLink from "next/link";
 
 const IndexPage = () => {
-    const bg = useColorModeValue("gray.200", "gray.900");
+    const bg = useColorModeValue("gray.700", "gray.900");
 
     return (
         <>
@@ -49,6 +49,7 @@ const IndexPage = () => {
                     <chakra.pre
                         dangerouslySetInnerHTML={{__html: Prism.highlight(`import {Num} from "decimalsystem";\nnew Num(10).toBase(Math.PI).toString();`, Prism.languages.javascript, "javascript")}}
                         bg={bg}
+                        color="white"
                     />
                 </chakra.div>
             </Box>
