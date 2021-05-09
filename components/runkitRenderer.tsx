@@ -7,10 +7,20 @@ const flatten = (text: string, child) => {
 
 const RunkitRenderer = props => {
     const children = React.Children.toArray(props.children);
-    const text = children.reduce(flatten, "");
+    const text: string = children.reduce(flatten, "");
 
     if(text.startsWith("runkit")) {
-        return (<Embed source={text.substring(6).replace(/\n$/, "")} gutterStyle="inside" nodeVersion="14.x.x" evaluateOnLoad={true}/>);
+        let newText = text.substring(6).replace(/\n$/, "");
+
+        let preamble = "";
+        let preambleSplit = newText.split("|pre|");
+
+        if(preambleSplit.length === 2){
+            preamble = preambleSplit.shift();
+            newText = preambleSplit.shift();
+        }
+
+        return (<Embed source={newText} preamble={preamble} gutterStyle="inside" nodeVersion="14.x.x" evaluateOnLoad={true}/>);
     }
 
     return React.createElement(props.node.tagName, props.node.properties, props.children);
