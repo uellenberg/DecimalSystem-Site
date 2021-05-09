@@ -4,7 +4,7 @@ import Menu from "../../components/menu/menu";
 import Header from "../../components/header";
 import {Box} from "@chakra-ui/layout";
 import remarkGfm from "remark-gfm";
-import HeadingRenderer from "../../components/HedaingRenderer";
+import HeadingRenderer from "../../components/headingRenderer";
 import SEO from "../../components/seo";
 import React, {useEffect} from "react";
 import RunkitRenderer from "../../components/runkitRenderer";
