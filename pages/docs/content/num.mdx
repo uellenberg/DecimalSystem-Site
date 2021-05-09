@@ -11,8 +11,8 @@ new Num(82).toBase(16).toString();
 new Num(options)
 ```
 Create a new `Num` instance to do base conversions.
-#### 
-| Name | Description | Value | Example |
+###### 
+| Name | Description | Type | Example |
 | :--- | :--- | :--- | :--- |
 | options | The options for the num. This includes the number being wrapped, as well as information about it (such as its base). | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)/[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) or [NumOptions](/docs/numoptions) | 26 |
 
@@ -22,9 +22,10 @@ Create a new `Num` instance to do base conversions.
 ```javascript
 num.toBase(base)
 ```
+###### 
 Convert a `Num` to another base. Note that base conversions are only done in `toString`; this method simply sets the base that the `Num` will be converted to.
-| Name | Description | Value |
-| :--- | :--- | :--- |
+| Name | Description | Type | Example |
+| :--- | :--- | :--- | :--- |
 | base | The base that the `Num` will be converted to. | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (greater than 1) | 16 |
 
 #### 
@@ -33,7 +34,8 @@ Convert a `Num` to another base. Note that base conversions are only done in `to
 ```javascript
 num.toString(precision?)
 ```
+###### 
 Turn a `Num` into a string. This may or may not be a valid [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), depending on the base used.
-| Name | Description | Value |
-| :--- | :--- | :--- |
+| Name | Description | Type | Example |
+| :--- | :--- | :--- | :--- |
 | precision? | The maximum amount of decimal digits that will appear in the number. For example, if the default (8) is used, a number will always have 8 or fewer decimals. | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (greater than 1) | 8 |

@@ -1,0 +1,47 @@
+# Getting Started
+To start using DecimalSystem, head over to [Installation](/docs/install) to install it, then take a look at [Num](/docs/num) to learn how to use it. You can also view the below examples:
+
+##### 
+
+## Examples
+### Convert a number to base 16
+```javascript
+import {Num} from "decimalsystem";
+
+new Num(123).toBase(16).toString(); //7b
+```
+### Convert a base 16 number to base 10
+```javascript
+import {Num} from "decimalsystem";
+
+new Num({num: "7b", base: 16}).toBase(10).toString(); //123
+```
+
+#### 
+
+### Convert a number to base 2.5
+```javascript
+import {Num} from "decimalsystem";
+
+new Num(17).toBase(2.5).toString(); //1001.0202002
+```
+### Convert a base 2.5 number to base 10
+```javascript
+import {Num} from "decimalsystem";
+
+new Num({num: "1001.0202002", base: 2.5}).toBase(10).toString(); //16.9994768
+```
+#### 
+
+### Convert a number to base PI
+```javascript
+import {Num} from "decimalsystem";
+
+new Num(54).toBase(Math.PI).toString(); //1001.0202002
+```
+### Convert a base PI number to base 10
+```javascript
+import {Num} from "decimalsystem";
+
+new Num({num: "1210.01010102", base: Math.PI}).toBase(10).toString(); //53.99991624422196
+```

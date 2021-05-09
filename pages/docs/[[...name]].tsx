@@ -42,7 +42,8 @@ export const getStaticPaths = async () => ({
         { params: { name: undefined } },
         { params: { name: [ "start" ] } },
         { params: { name: [ "install" ] } },
-        { params: { name: [ "num" ] } }
+        { params: { name: [ "num" ] } },
+        { params: { name: [ "numoptions" ] } }
     ],
         fallback: false
 });
