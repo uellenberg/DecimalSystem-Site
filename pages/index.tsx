@@ -96,6 +96,37 @@ const IndexPage = () => {
                     <Demo aria="Golden Ratio Demo" desc="View the relationship between the sides of a golden spiral in base golden ratio." img="/img/demo-golden.png" title="Golden Ratio" url="/golden"/>
                 </Grid>
             </Box>
+
+            <Divider mt={{base: "10%", md: "5%"}}/>
+
+            <Box
+                as="section"
+                id="supporters"
+                mt={{base: "10%", md: "5%"}}
+            >
+                <chakra.header
+                    fontFamily="open-sans"
+                    fontSize={{base: "30", md: "40", lg: "40"}}
+                    pl={{base: "15", md: "50", lg: "60"}}
+                    pr={{base: "15", md: "50", lg: "60"}}
+                    display="block"
+                    textAlign="center"
+                >
+                    Supporters
+                </chakra.header>
+                <chakra.p
+                    fontFamily="abhaya-libre"
+                    fontSize={{base: "20", lg: "30"}}
+                    pl={{base: "30", lg: "80"}}
+                    pr={{base: "30", lg: "80"}}
+                    pb={{base: "5"}}
+                    display="block"
+                    color="gray.400"
+                    textAlign="center"
+                >
+                    DecimalSystem is supported by <Link href="https://cratecode.com" aria-label="Cratecode - Learn to code for free through interactive online lessons" color="blue.300">Cratecode - Learn to code for free through interactive online lessons</Link>.
+                </chakra.p>
+            </Box>
         </>
     );
 }
