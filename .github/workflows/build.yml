@@ -21,7 +21,7 @@ jobs:
           yarn install --frozen-lockfile
           yarn build
       - name: Deploy to Github Pages
-        uses: cpina/github-action-push-to-another-repository@v1.3
+        uses: cpina/github-action-push-to-another-repository@v1.5.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
